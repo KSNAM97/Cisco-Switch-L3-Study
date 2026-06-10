@@ -1,4 +1,4 @@
-# Cisco Switch L2 Study
+# Cisco Switch L3 Study
 
 ![Cisco](https://img.shields.io/badge/Cisco-IOS-blue)
 ![Switch](https://img.shields.io/badge/Layer3-Switch-green)
