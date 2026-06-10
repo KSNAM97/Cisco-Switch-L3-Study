@@ -1,0 +1,134 @@
+! ============================================================
+!  Lab 01. Routed Port + EIGRP  (Preconfig)
+!  Topology : SW1 - SW2 - SW3 / SW2 - R4 - SW4
+!  Routing  : EIGRP AS 100 (no auto-summary)
+! ============================================================
+!
+!
+! ############################################################
+! #  SW1
+! ############################################################
+en
+conf t
+!
+! ===== STEP 1. ip routing =====
+ip routing
+!
+! ===== STEP 2. Loopback =====
+interface loopback 0
+ ip address 13.13.10.1 255.255.255.0
+!
+! ===== STEP 3. Routed Port (no switchport) =====
+int e0/0
+ no switchport
+ ip address 13.13.12.1 255.255.255.0
+ no sh
+!
+! ===== STEP 4. EIGRP 100 =====
+router eigrp 100
+ no auto-summary
+ network 13.13.10.0 0.0.0.255
+ network 13.13.12.0 0.0.0.255
+!
+end
+!
+!
+! ############################################################
+! #  SW2
+! ############################################################
+en
+conf t
+!
+! ===== STEP 1. ip routing =====
+ip routing
+!
+! ===== STEP 2. Loopback =====
+interface loopback 0
+ ip address 13.13.20.2 255.255.255.0
+!
+! ===== STEP 3. Routed Port (no switchport) =====
+int e0/0
+ no switchport
+ ip address 13.13.12.2 255.255.255.0
+ no sh
+!
+int e0/1
+ no switchport
+ ip address 13.13.23.2 255.255.255.0
+ no sh
+!
+int e0/2
+ no switchport
+ ip address 13.13.22.2 255.255.255.0
+ no sh
+!
+! ===== STEP 4. EIGRP 100 =====
+router eigrp 100
+ no auto-summary
+ network 13.13.20.0 0.0.0.255
+ network 13.13.12.0 0.0.0.255
+ network 13.13.23.0 0.0.0.255
+ network 13.13.22.0 0.0.0.255
+!
+end
+!
+!
+! ############################################################
+! #  SW3
+! ############################################################
+en
+conf t
+!
+! ===== STEP 1. ip routing =====
+ip routing
+!
+! ===== STEP 2. Loopback =====
+interface loopback 0
+ ip address 13.13.30.3 255.255.255.0
+!
+! ===== STEP 3. Routed Port (no switchport) =====
+int e0/1
+ no switchport
+ ip address 13.13.23.3 255.255.255.0
+ no sh
+!
+! ===== STEP 4. EIGRP 100 =====
+router eigrp 100
+ no auto-summary
+ network 13.13.30.0 0.0.0.255
+ network 13.13.23.0 0.0.0.255
+!
+end
+!
+!
+! ############################################################
+! #  R4  (Router)
+! ############################################################
+en
+conf t
+!
+! ===== STEP 1. Interface =====
+int fa0/0
+ ip address 13.13.22.4 255.255.255.0
+ no sh
+!
+int fa0/1
+ ip address 13.13.44.254 255.255.255.0
+ no sh
+!
+! ===== STEP 2. EIGRP 100 =====
+router eigrp 100
+ no auto-summary
+ network 13.13.22.0 0.0.0.255
+ network 13.13.44.0 0.0.0.255
+!
+end
+!
+!
+! ============================================================
+!  Verify
+!   show ip eigrp neighbors
+!   show ip route eigrp        ( D = EIGRP )
+!   show ip protocols
+!   ping 13.13.30.3 source 13.13.10.1
+! ============================================================
