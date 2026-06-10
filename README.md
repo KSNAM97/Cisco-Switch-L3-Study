@@ -1,4 +1,9 @@
-# 🌐 Cisco Layer 3 Switch Study (Multi-Layer Switch)
+# Cisco Switch L2 Study
+
+![Cisco](https://img.shields.io/badge/Cisco-IOS-blue)
+![Switch](https://img.shields.io/badge/Layer3-Switch-green)
+![GNS3](https://img.shields.io/badge/Lab-GNS3-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 **Cisco Layer 3 Switch (Routed Port / SVI / VTP / Inter-VLAN Routing / EIGRP / OSPF)**
 
