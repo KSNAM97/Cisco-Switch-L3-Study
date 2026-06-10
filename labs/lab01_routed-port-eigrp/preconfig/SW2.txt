@@ -1,0 +1,31 @@
+en
+conf t
+!
+ip routing
+!
+interface loopback 0
+ ip address 13.13.20.2 255.255.255.0
+!
+int e0/0
+ no switchport
+ ip address 13.13.12.2 255.255.255.0
+ no sh
+!
+int e0/1
+ no switchport
+ ip address 13.13.23.2 255.255.255.0
+ no sh
+!
+int e0/2
+ no switchport
+ ip address 13.13.22.2 255.255.255.0
+ no sh
+!
+router eigrp 100
+ no auto-summary
+ network 13.13.20.0 0.0.0.255
+ network 13.13.12.0 0.0.0.255
+ network 13.13.23.0 0.0.0.255
+ network 13.13.22.0 0.0.0.255
+!
+end
