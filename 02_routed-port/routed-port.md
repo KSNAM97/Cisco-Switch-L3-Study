@@ -67,3 +67,9 @@ show ip route
 - VLAN에 소속되지 않고 IP를 직접 할당
 - 스위치-라우터, 스위치-스위치 간 P2P L3 링크에 사용
 - 사용 전 `ip routing` 활성화 필수
+
+
+---
+
+⬅️ 이전: [01. L3 Switch Basics](../01_l3-switch-basics/l3-switch-basics.md) | 🏠 [README](../README.md) | ➡️ 다음: [03. SVI](../03_svi/svi.md)
+
