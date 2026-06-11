@@ -127,3 +127,8 @@ Neighbor ID     Pri   State           Dead Time   Address         Interface
 - Process ID는 로컬, **Area와 네트워크 정보**가 이웃 형성에 중요
 - `passive-interface default` + `no passive-interface`로 효율적 구성
 - 이웃 상태 **FULL** = 정상, 라우팅 테이블에 `O`로 표시
+
+- ---
+
+⬅️ 이전: [05. EIGRP](../05_eigrp/eigrp.md) | 🏠 [README](../README.md) | ➡️ 다음: [07. EtherChannel](../07_etherchannel/etherchannel.md)
+
