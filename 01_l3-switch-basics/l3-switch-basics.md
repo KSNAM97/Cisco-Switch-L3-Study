@@ -72,3 +72,8 @@ int vlan 11
 - 모든 L3 동작의 전제는 `ip routing` 활성화
 - IP 할당 방식: **Routed Port**(물리, P2P) / **SVI**(VLAN, Gateway)
 - 라우팅을 하드웨어(ASIC)로 처리해 고속이며 분배/코어 계층에 사용
+
+  ---
+
+🏠 [README](../README.md) | ➡️ 다음: [02. Routed Port](../02_routed-port/routed-port.md)
+
