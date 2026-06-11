@@ -68,3 +68,8 @@ show ip route connected
 - 용도 ① 스위치 관리용 IP, ② VLAN의 Default Gateway
 - VLAN과 active 포트가 있어야 SVI가 up 됨
 - 사용 전 `ip routing` 활성화 필수 (라우팅 용도일 경우)
+
+  ---
+
+⬅️ 이전: [02. Routed Port](../02_routed-port/routed-port.md) | 🏠 [README](../README.md) | ➡️ 다음: [04. Inter-VLAN Routing](../04_inter-vlan/inter-vlan.md)
+
