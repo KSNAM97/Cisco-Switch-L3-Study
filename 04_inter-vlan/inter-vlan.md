@@ -82,3 +82,8 @@ ping 13.13.14.1   ! 다른 VLAN Gateway로 통신 확인
 - L3 Switch에서는 **SVI를 Gateway로 사용**하는 방식이 표준
 - Trunk의 `allowed vlan`으로 통과 VLAN을 제어
 - PC의 Gateway는 해당 VLAN의 SVI IP로 설정
+
+  ---
+
+⬅️ 이전: [02. Routed Port](../02_routed-port/routed-port.md) | 🏠 [README](../README.md) | ➡️ 다음: [04. Inter-VLAN Routing](../04_inter-vlan/inter-vlan.md)
+
