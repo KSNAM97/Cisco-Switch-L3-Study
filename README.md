@@ -7,7 +7,8 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 **Cisco Layer 3 Switch (Routed Port / SVI / VTP / Inter-VLAN Routing / EIGRP / OSPF / EtherChannel)**
-
+> - [Part 1 · Layer 2](https://github.com/KSNAM97/CISCO-SWITCH-L2STUDY)
+> - **Part 2 · Layer 3** ← 현재 문서
 ---
 
 Cisco IOS 기반 **L3 Switch(Multi-Layer Switch)** 실습 스터디 자료입니다.  
