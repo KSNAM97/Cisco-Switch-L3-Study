@@ -85,5 +85,5 @@ ping 13.13.14.1   ! 다른 VLAN Gateway로 통신 확인
 
   ---
 
-⬅️ 이전: [02. Routed Port](../02_routed-port/routed-port.md) | 🏠 [README](../README.md) | ➡️ 다음: [04. Inter-VLAN Routing](../04_inter-vlan/inter-vlan.md)
+**⬅️ 이전: [02. Routed Port](../02_routed-port/routed-port.md) | 🏠 [README](../README.md) | ➡️ 다음: [04. Inter-VLAN Routing](../04_inter-vlan/inter-vlan.md)**
 
